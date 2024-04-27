@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Body from "./components/Body";
+import Header from "./components/Header";
 
 function App() {
+  // const rootlevelProp = "I am app.js";
+  // const rootlevelProp2 = "I am also app.js";
+  
+  
+  
+  const [rootlevelProp,setRootlevelProp] 
+  = useState("I am app.js")
+
+  const [rootlevelProp2,setRootlevelProp2] 
+  = useState("I am also app.js")
+
+  const [userData,setUserData] = useState({})
+  console.log(userData,"App.js")
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      Hello World
+      <Header />
+      <Body setUserData={setUserData} setRootlevelProp2={setRootlevelProp2} rootlevelProp2={rootlevelProp2} rootlevelProp={rootlevelProp} />
     </div>
   );
 }
