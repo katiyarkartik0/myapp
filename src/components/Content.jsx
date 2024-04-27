@@ -1,9 +1,11 @@
-import Form from "./Form"
+import Form from "./Form";
 
-const Content = ({setUserData}) =>{
-    return (
-        <><Form setUserData={setUserData}/></>
-   )
-}
+const Content = ({ setUserData }) => {
+  return (
+    <>
+      <Form setUserData={setUserData} />
+    </>
+  );
+};
 
-export default Content
+export default Content;
